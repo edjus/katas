@@ -1,11 +1,11 @@
 os:
-    - linux
-  language: csharp
-  mono: none
-  dotnet: 3.0
-  install:
-    - dotnet restore
+  - linux
+language: csharp
+mono: none
+dotnet: 3.0
+install:
+  - dotnet restore
   
-  script:
+script:
   - dotnet build
   - dotnet test
