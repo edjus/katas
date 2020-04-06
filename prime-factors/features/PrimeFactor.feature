@@ -9,3 +9,9 @@ Scenario: Prime factors of 2
     Given the number 2
     When I generete the prime factors
     Then the prime factor is 2   
+
+@ignore @wip
+Scenario: Prime factors of 3
+    Given the number 3
+    When I generete the prime factors
+    Then the prime factor is 3
