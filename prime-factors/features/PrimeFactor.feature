@@ -15,7 +15,6 @@ Scenario: Prime factors of 3
     When I generete the prime factors
     Then the prime factor is 3
 
-@ignore @wip
 Scenario: Prime factors of 4
     Given the number 4
     When I generete the prime factors
