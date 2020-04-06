@@ -6,48 +6,43 @@ namespace katas.prime_factors.steps
 {
     public class PrimeFactorsTests
     {
-        private readonly PrimeFactors primeFactors;
         private static IList<int> List(params int[] ints) => ints.Select(i => (int)i).ToList();
 
-        public PrimeFactorsTests()
-        {
-            this.primeFactors = new PrimeFactors();
-        }
 
         [Fact]
         public void PrimeFactorsOfOneIsEmpty()
         {
-            Assert.Equal(List(), primeFactors.primeFactorsOf(1));
+            Assert.Equal(List(), PrimeFactors.ValueOf(1));
         }
 
         [Fact]
         public void PrimeFactorsOfTwoIsTwo()
         {
-            Assert.Equal(List(2), primeFactors.primeFactorsOf(2));
+            Assert.Equal(List(2), PrimeFactors.ValueOf(2));
         }
 
         [Fact]
         public void PrimeFactorsOfThreeIsThree()
         {
-            Assert.Equal(List(3), primeFactors.primeFactorsOf(3));
+            Assert.Equal(List(3), PrimeFactors.ValueOf(3));
         }
 
         [Fact]
         public void PrimeFactorsOfFour()
         {
-            Assert.Equal(List(2, 2), primeFactors.primeFactorsOf(4));
+            Assert.Equal(List(2, 2), PrimeFactors.ValueOf(4));
         }
 
         [Fact]
         public void PrimeFactorsOfSix()
         {
-            Assert.Equal(List(2, 3), primeFactors.primeFactorsOf(6));
+            Assert.Equal(List(2, 3), PrimeFactors.ValueOf(6));
         }
 
         [Fact]
         public void PrimeFactorsOfEight()
         {
-            Assert.Equal(List(3, 3), primeFactors.primeFactorsOf(9));
+            Assert.Equal(List(3, 3), PrimeFactors.ValueOf(9));
         }
     }
 }

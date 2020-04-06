@@ -11,19 +11,17 @@ namespace katas.prime_factors.steps
     {
         private int number;
         private List<int> result;
-        private PrimeFactors primeFactors;
 
         [Given(@"the number (.*)")]
         public void GivenTheNumber(int aNumber)
         {
             this.number = aNumber;
-            primeFactors = new PrimeFactors();
         }
 
         [When(@"I generete the prime factors")]
         public void WhenIGenereteThePrimeFactors()
         {
-            this.result = primeFactors.primeFactorsOf(this.number);
+            this.result = PrimeFactors.ValueOf(this.number);
         }
 
         [Then(@"there is not prime factors")]
@@ -35,13 +33,13 @@ namespace katas.prime_factors.steps
         [Then(@"the prime factor is (.*)")]
         public void ThenThePrimeFactorIs(int primeResult)
         {
-            Assert.Equal(new List<int>() { primeResult }, primeFactors.primeFactorsOf(this.number));
+            Assert.Equal(new List<int>() { primeResult }, this.result);
         }
 
         [Then(@"the prime factors are (.*)")]
         public void ThenThePrimeFactorsAre(string strPrimeFactors)
         {
-            Assert.Equal(StringToListInt(strPrimeFactors), primeFactors.primeFactorsOf(this.number));
+            Assert.Equal(StringToListInt(strPrimeFactors), this.result);
         }
 
         private List<int> StringToListInt(string strPrimeFactors) => strPrimeFactors.Split(',').Select(int.Parse).ToList();
