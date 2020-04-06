@@ -30,5 +30,11 @@ namespace katas.prime_factors.steps
         {
             Assert.Equal(new List<int>() { 3 }, primeFactors.primeFactorsOf(3));
         }
+
+        [Fact]
+        public void PrimeFactorsOfFour()
+        {
+            Assert.Equal(new List<int>() { 2,2 }, primeFactors.primeFactorsOf(4));
+        }
     }
 }
