@@ -34,3 +34,9 @@ Scenario: Prime factors of 7
     Given the number 7
     When I generete the prime factors
     Then the prime factor is 7
+
+@ignore @wip
+Scenario: Prime factors of 8
+    Given the number 8
+    When I generete the prime factors
+    Then the prime factors are 2,2,2
