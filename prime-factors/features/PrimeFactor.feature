@@ -39,3 +39,9 @@ Scenario: Prime factors of 8
     Given the number 8
     When I generete the prime factors
     Then the prime factors are 2,2,2
+
+@wip @ignore
+Scenario: Prime factors of 9
+    Given the number 9
+    When I generete the prime factors
+    Then the prime factors are 3,3
