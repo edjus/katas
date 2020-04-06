@@ -30,5 +30,11 @@ namespace katas.prime_factors.steps
         {
             Assert.False(result.Any());
         }
+
+        [Then(@"the prime factor is (.*)")]
+         public void ThenThePrimeFactorIs(int primeResult)
+         {
+             Assert.Equal(new List<int>(){primeResult}, primeFactors.primeFactorsOf(this.number));
+         }
     }
 }
