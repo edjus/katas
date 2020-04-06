@@ -8,7 +8,9 @@ namespace katas.prime_factors
 
         public List<int> primeFactorsOf(int number)
         {
-            return new List<int>();
+            if (number == 1)
+                return new List<int>();
+            return new List<int>(){2};
         }
     }
 }

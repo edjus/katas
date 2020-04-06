@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -15,7 +16,13 @@ namespace katas.prime_factors.steps
         [Fact]
         public void PrimeFactorsOfOneIsEmpty()
         {
-           Assert.False(primeFactors.primeFactorsOf(1).Any());
+            Assert.False(primeFactors.primeFactorsOf(1).Any());
+        }
+
+        [Fact]
+        public void PrimeFactorsOfTwoIsTwo()
+        {
+            Assert.Equal(new List<int>() { 2 }, primeFactors.primeFactorsOf(2));
         }
     }
 }
