@@ -19,3 +19,8 @@ Scenario: Prime factors of 4
     Given the number 4
     When I generete the prime factors
     Then the prime factors are 2,2
+
+Scenario: Prime factors of 5
+    Given the number 5
+    When I generete the prime factors
+    Then the prime factor is 5
