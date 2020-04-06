@@ -46,7 +46,7 @@ namespace katas.prime_factors.steps
         [Fact]
         public void PrimeFactorsOfEight()
         {
-            Assert.Equal(new List<int>() { 2, 2, 2 }, primeFactors.primeFactorsOf(8));
+            Assert.Equal(new List<int>() { 3, 3 }, primeFactors.primeFactorsOf(9));
         }
     }
 }
