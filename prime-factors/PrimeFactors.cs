@@ -10,10 +10,10 @@ namespace katas.prime_factors
         {
             var primeFactors = new List<int>();
 
-            if (number % 2 == 0)
+            while (number % 2 == 0)
             {
                 primeFactors.Add(2);
-                number = number / 2;
+                number /= 2;
             }
             
             if (number > 1)
