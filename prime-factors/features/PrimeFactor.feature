@@ -44,3 +44,8 @@ Scenario: Prime factors of 9
     Given the number 9
     When I generete the prime factors
     Then the prime factors are 3,3
+
+Scenario: Prime factors of 4620
+    Given the number 4620
+    When I generete the prime factors
+    Then the prime factors are 2,2,3,5,7,11
