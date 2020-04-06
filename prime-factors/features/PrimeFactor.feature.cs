@@ -163,17 +163,11 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Prime factors of 3")]
         [Xunit.TraitAttribute("FeatureTitle", "Prime Factors")]
         [Xunit.TraitAttribute("Description", "Prime factors of 3")]
-        [Xunit.TraitAttribute("Category", "ignore")]
-        [Xunit.TraitAttribute("Category", "wip")]
         public virtual void PrimeFactorsOf3()
         {
-            string[] tagsOfScenario = new string[] {
-                    "ignore",
-                    "wip"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prime factors of 3", null, new string[] {
-                        "ignore",
-                        "wip"});
-#line 14
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prime factors of 3", null, ((string[])(null)));
+#line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -193,13 +187,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 15
+#line 14
     testRunner.Given("the number 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 16
+#line 15
     testRunner.When("I generete the prime factors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
+#line 16
     testRunner.Then("the prime factor is 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
