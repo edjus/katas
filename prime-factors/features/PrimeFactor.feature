@@ -25,8 +25,7 @@ Scenario: Prime factors of 5
     When I generete the prime factors
     Then the prime factor is 5
 
-@ignore @wip
 Scenario: Prime factors of 6
     Given the number 6
     When I generete the prime factors
-    Then the prime factor are 2,3
+    Then the prime factors are 2,3
