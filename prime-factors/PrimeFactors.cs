@@ -13,10 +13,10 @@ namespace katas.prime_factors
             if (number % 2 == 0)
             {
                 primeFactors.Add(2);
-                if (number / 2 != 1)
-                    primeFactors.Add(number / 2);
+                number = number / 2;
             }
-            else if (number > 1)
+            
+            if (number > 1)
                 primeFactors.Add(number);
 
             return primeFactors;
