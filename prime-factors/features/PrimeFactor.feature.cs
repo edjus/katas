@@ -80,13 +80,13 @@ namespace katas.Prime_Factors.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Prime factor for 1")]
+        [Xunit.SkippableFactAttribute(DisplayName="Prime factors of 1")]
         [Xunit.TraitAttribute("FeatureTitle", "Prime Factors")]
-        [Xunit.TraitAttribute("Description", "Prime factor for 1")]
-        public virtual void PrimeFactorFor1()
+        [Xunit.TraitAttribute("Description", "Prime factors of 1")]
+        public virtual void PrimeFactorsOf1()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prime factor for 1", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prime factors of 1", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -115,6 +115,52 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 6
     testRunner.Then("there is not prime factors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Prime factors of 2")]
+        [Xunit.TraitAttribute("FeatureTitle", "Prime Factors")]
+        [Xunit.TraitAttribute("Description", "Prime factors of 2")]
+        [Xunit.TraitAttribute("Category", "ignore")]
+        [Xunit.TraitAttribute("Category", "wip")]
+        public virtual void PrimeFactorsOf2()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ignore",
+                    "wip"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prime factors of 2", null, new string[] {
+                        "ignore",
+                        "wip"});
+#line 9
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 10
+    testRunner.Given("the number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 11
+    testRunner.When("I generete the prime factors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
+    testRunner.Then("the prime factor is 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
