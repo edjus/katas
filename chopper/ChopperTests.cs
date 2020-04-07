@@ -26,5 +26,11 @@ namespace katas.chopper
         {
             Assert.Equal(2, chopper.chop(3, List(0,7,3)));
         }
+
+        [Fact]
+        public void SumDeListaVacia_DebeSerVacio()
+        {
+            Assert.Equal("empty", chopper.sum(List()));
+        }
     }
 }

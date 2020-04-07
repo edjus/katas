@@ -11,5 +11,10 @@ namespace katas.chopper
 
             return list.IndexOf(element);
         }
+
+        public string sum(IList<int> list)
+        {
+            return "empty";
+        }
     }
 }
