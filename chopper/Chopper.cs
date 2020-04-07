@@ -5,8 +5,10 @@ namespace katas.chopper
 {
     public class Chopper
     {
-        public int chop(int v, List<int> list)
+        public int chop(int v, IList<int> list)
         {
+            if (list.Count > 0) return 0;
+            
             return -1;
         }
     }
