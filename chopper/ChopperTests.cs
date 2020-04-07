@@ -50,5 +50,11 @@ namespace katas.chopper
         {
             Assert.Equal("one,eight", chopper.sum(List(9,9)));
         }
+
+        [Fact]
+        public void SumDeListaCon50y50_DebeSer_DemasidoGrande()
+        {
+            Assert.Equal("too big", chopper.sum(List(50,50)));
+        }
     }
 }

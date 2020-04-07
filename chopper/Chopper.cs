@@ -25,7 +25,9 @@ namespace katas.chopper
         public string sum(IList<int> list)
         {
             if (list.Count == 0) return "empty";
+            
             int sum  = list.Sum();
+            if (!sums.ContainsKey(sum)) return "too big";
             
             return sums[sum];
         }
