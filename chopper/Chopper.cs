@@ -18,6 +18,8 @@ namespace katas.chopper
             numbers.Add(9, "nine");
             numbers.Add(0, "zero");
             numbers.Add(5, "five");
+            numbers.Add(2, "two");
+            numbers.Add(3, "three");
         }
         public int chop(int element, IList<int> list)
         {
@@ -32,7 +34,6 @@ namespace katas.chopper
             int sum  = list.Sum();
             if (sum > MAX_VALUE) return "too big";
             if (sum < TOP_ONE_DIGIT) return numbers[sum];
-            
             
             return numbers[sum/10] + "," + numbers[sum%10];
         }
