@@ -32,5 +32,11 @@ namespace katas.chopper
         {
             Assert.Equal("empty", chopper.sum(List()));
         }
+
+        [Fact]
+        public void SumDeListaCon1_DebeSerUno()
+        {
+            Assert.Equal("one", chopper.sum(List(1)));
+        }
     }
 }

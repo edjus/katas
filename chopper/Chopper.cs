@@ -14,6 +14,7 @@ namespace katas.chopper
 
         public string sum(IList<int> list)
         {
+            if (list.Count > 0) return "one";
             return "empty";
         }
     }
