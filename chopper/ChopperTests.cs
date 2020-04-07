@@ -62,5 +62,11 @@ namespace katas.chopper
         {
             Assert.Equal("nine,nine", chopper.sum(List(50,49)));
         }
+
+        [Fact]
+        public void SumDeListaCon0y0_DebeSer_Cero()
+        {
+            Assert.Equal("zero", chopper.sum(List(0,0)));
+        }
     }
 }
