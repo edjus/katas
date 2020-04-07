@@ -68,5 +68,11 @@ namespace katas.chopper
         {
             Assert.Equal("zero", chopper.sum(List(0,0)));
         }
+
+        [Fact]
+        public void SumDeListaCon15_DebeSer_Uno_Cinco()
+        {
+            Assert.Equal("one,five", chopper.sum(List(15)));
+        }
     }
 }

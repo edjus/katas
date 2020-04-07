@@ -16,6 +16,7 @@ namespace katas.chopper
             sumResults.Add(18, "one,eight");
             sumResults.Add(99, "nine,nine");
             sumResults.Add(0, "zero");
+            sumResults.Add(15, "one,five");
         }
         public int chop(int element, IList<int> list)
         {
