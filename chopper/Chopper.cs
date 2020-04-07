@@ -6,17 +6,18 @@ namespace katas.chopper
 {
     public class Chopper
     {
-        private Dictionary<int,string> sumResults;
-
+        private Dictionary<int,string> numbers;
+        private const int MAX_VALUE = 99;
+        private const int TOP_ONE_DIGIT = 10;
         public Chopper()
         {
-            sumResults = new Dictionary<int, string>();
-            sumResults.Add(1, "one");
-            sumResults.Add(4, "four");
-            sumResults.Add(18, "one,eight");
-            sumResults.Add(99, "nine,nine");
-            sumResults.Add(0, "zero");
-            sumResults.Add(15, "one,five");
+            numbers = new Dictionary<int, string>();
+            numbers.Add(1, "one");
+            numbers.Add(4, "four");
+            numbers.Add(8, "eight");
+            numbers.Add(9, "nine");
+            numbers.Add(0, "zero");
+            numbers.Add(5, "five");
         }
         public int chop(int element, IList<int> list)
         {
@@ -28,11 +29,12 @@ namespace katas.chopper
         public string sum(IList<int> list)
         {
             if (list.Count == 0) return "empty";
-            
             int sum  = list.Sum();
-            if (!sumResults.ContainsKey(sum)) return "too big";
+            if (sum > MAX_VALUE) return "too big";
+            if (sum < TOP_ONE_DIGIT) return numbers[sum];
             
-            return sumResults[sum];
+            
+            return numbers[sum/10] + "," + numbers[sum%10];
         }
     }
 }
