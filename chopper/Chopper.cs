@@ -6,6 +6,15 @@ namespace katas.chopper
 {
     public class Chopper
     {
+        private Dictionary<int,string> sums;
+
+        public Chopper()
+        {
+            sums = new Dictionary<int, string>();
+            sums.Add(1, "one");
+            sums.Add(4, "four");
+            sums.Add(18, "one,eight");
+        }
         public int chop(int element, IList<int> list)
         {
             if (list.Count == 0) return -1;
@@ -15,13 +24,10 @@ namespace katas.chopper
 
         public string sum(IList<int> list)
         {
+            if (list.Count == 0) return "empty";
             int sum  = list.Sum();
             
-            if (sum == 1) return "one";
-            if (sum == 4) return "four";
-            if (sum == 18) return "one,eight";
-            
-            return "empty";
+            return sums[sum];
         }
     }
 }
