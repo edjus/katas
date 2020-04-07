@@ -20,5 +20,11 @@ namespace katas.chopper
         {
             Assert.Equal(0, chopper.chop(3, List(3)));
         }
+
+        [Fact]
+        public void ChopDe3YListaCon_0_7_3_DebeSerDos()
+        {
+            Assert.Equal(2, chopper.chop(3, List(0,7,3)));
+        }
     }
 }
