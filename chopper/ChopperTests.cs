@@ -38,5 +38,11 @@ namespace katas.chopper
         {
             Assert.Equal("one", chopper.sum(List(1)));
         }
+
+        [Fact]
+        public void SumDeListaCon1y3_DebeSerCuatro()
+        {
+            Assert.Equal("four", chopper.sum(List(1,3)));
+        }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace katas.chopper
 {
@@ -14,7 +15,11 @@ namespace katas.chopper
 
         public string sum(IList<int> list)
         {
-            if (list.Count > 0) return "one";
+            int sum  = list.Sum();
+            
+            if (sum == 1) return "one";
+            if (sum == 4) return "four";
+            
             return "empty";
         }
     }
