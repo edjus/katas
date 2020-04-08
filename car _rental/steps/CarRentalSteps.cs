@@ -42,8 +42,8 @@ namespace katas.Car_Rental.steps
         [When(@"I pay for the rent")]
         public void WhenIPayForTheRent()
         {
-            var car_rental = new CarRental();
-            this.result = car_rental.CalculateAmount(this.rent_type, this.duration);
+            var app = new App();
+            this.result = app.ProcessRent(this.rent_type, this.duration);
 
         }
         

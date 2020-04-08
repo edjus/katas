@@ -5,7 +5,7 @@ namespace katas.car_rental
 {
     public class CarRental
     {
-        public string CalculateAmount(string type, int duration)
+        public int CalculateAmount(string type, int duration)
         {
             int amount = 0;
 
@@ -16,7 +16,7 @@ namespace katas.car_rental
             if (type == "k")
                 amount = (new RentPerKilometre(duration)).Amount();
 
-            return $"Amount: {amount}";
+            return amount;
         }
     }
 }

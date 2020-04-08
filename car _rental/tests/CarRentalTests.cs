@@ -13,43 +13,43 @@ namespace katas.car_rental
         [Fact]
         public void HourlyRent_AmountIs0whenDurationIs0()
         {
-            Assert.Equal("Amount: 0", car_rental.CalculateAmount("h", 0));
+            Assert.Equal(0, car_rental.CalculateAmount("h", 0));
         }
 
         [Fact]
         public void HourlyRent_AmountIs100whenDurationIs1()
         {
-            Assert.Equal("Amount: 100", car_rental.CalculateAmount("h", 1));
+            Assert.Equal(100, car_rental.CalculateAmount("h", 1));
         }
 
         [Fact]
         public void HourlyRent_AmountIs300whenDurationIs3()
         {
-            Assert.Equal("Amount: 300", car_rental.CalculateAmount("h", 3));
+            Assert.Equal(300, car_rental.CalculateAmount("h", 3));
         }
 
         [Fact]
         public void RentPerDay_AmountIs2000whenDurationIs1()
         {
-            Assert.Equal("Amount: 2000", car_rental.CalculateAmount("d", 1));
+            Assert.Equal(2000, car_rental.CalculateAmount("d", 1));
         }
 
         [Fact]
         public void RentPerDay_AmountIs4000whenDurationIs2()
         {
-            Assert.Equal("Amount: 4000", car_rental.CalculateAmount("d", 2));
+            Assert.Equal(4000, car_rental.CalculateAmount("d", 2));
         }
 
         [Fact]
         public void RentPerKm_AmountIs100whenDurationIs0()
         {
-            Assert.Equal("Amount: 100", car_rental.CalculateAmount("k", 0));
+            Assert.Equal(100, car_rental.CalculateAmount("k", 0));
         }
 
         [Fact]
         public void RentPerKm_AmountIs110whenDurationIs1()
         {
-            Assert.Equal("Amount: 110", car_rental.CalculateAmount("k", 1));
+            Assert.Equal(110, car_rental.CalculateAmount("k", 1));
         }
     }
 }
