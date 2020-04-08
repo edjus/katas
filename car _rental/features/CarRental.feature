@@ -8,4 +8,4 @@ Scenario: Hourly rent
     And the kind rent is 'hour'
     And the duration rent is 3
     When I pay for the rent
-    Then the import is 300
+    Then the result is "Amount: 300"

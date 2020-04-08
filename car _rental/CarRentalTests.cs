@@ -13,19 +13,19 @@ namespace katas.Carrental
         [Fact]
         public void HourlyRent_ImportIs0whenDurationIs0()
         {
-            Assert.Equal("Importe: 0", car_rental.GetImport("h", 0));
+            Assert.Equal("Amount: 0", car_rental.CalculateAmount("h", 0));
         }
 
         [Fact]
         public void HourlyRent_ImportIs100whenDurationIs1()
         {
-            Assert.Equal("Importe: 100", car_rental.GetImport("h", 1));
+            Assert.Equal("Amount: 100", car_rental.CalculateAmount("h", 1));
         }
 
         [Fact]
         public void HourlyRent_ImportIs300whenDurationIs3()
         {
-            Assert.Equal("Importe: 300", car_rental.GetImport("h", 3));
+            Assert.Equal("Amount: 300", car_rental.CalculateAmount("h", 3));
         }
         
     }
