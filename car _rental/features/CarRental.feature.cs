@@ -117,7 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.And("cuit number \"20112223336\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 7
-    testRunner.And("the kind rent is \'hour\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("the kind rent is \'h\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
     testRunner.And("the duration rent is 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -127,6 +127,64 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 10
     testRunner.Then("the result is \"Amount: 300\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Rent per day")]
+        [Xunit.TraitAttribute("FeatureTitle", "Car rental")]
+        [Xunit.TraitAttribute("Description", "Rent per day")]
+        [Xunit.TraitAttribute("Category", "wip")]
+        [Xunit.TraitAttribute("Category", "ignore")]
+        public virtual void RentPerDay()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "wip",
+                    "ignore"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Rent per day", null, new string[] {
+                        "wip",
+                        "ignore"});
+#line 13
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 14
+    testRunner.Given("the rent date \'2019-01-19\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 15
+    testRunner.And("the return date \'2019-01-19\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+    testRunner.And("cuit number \"20112223336\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+    testRunner.And("the kind rent is \'d\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+    testRunner.And("the duration rent is 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
+    testRunner.When("I pay for the rent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 20
+    testRunner.Then("the result is \"Amount: 2000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
