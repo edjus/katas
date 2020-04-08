@@ -5,17 +5,17 @@ namespace katas.car_rental
 {
     public class RentPerHour
     {
-        private int duration;
+        private int hours;
         private const int PRICE_PER_HOUR = 100;
 
-        public RentPerHour(int duration)
+        public RentPerHour(int hours)
         {
-            this.duration = duration;
+            this.hours = hours;
         }
 
         public int Amount()
         {
-            return PRICE_PER_HOUR * duration;
+            return PRICE_PER_HOUR * hours;
         }
     }
 }

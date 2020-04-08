@@ -5,13 +5,16 @@ namespace katas.car_rental
 {
     public class RentPerDay
     {
-        public RentPerDay(int duration)
+        private int days;
+        private const int PRICE_PER_DAY = 2000;
+        public RentPerDay(int days)
         {
+            this.days = days;
         }
 
         public int Amount()
         {
-            return 0;
+            return PRICE_PER_DAY * days;
         }
     }
 }
