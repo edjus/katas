@@ -17,7 +17,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "h";
             rentDC.Duration = 0;
-            Assert.Equal(0, carRental.CalculateAmount(rentDC));
+            Assert.Equal(0, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
         [Fact]
@@ -25,7 +25,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "h";
             rentDC.Duration = 1;
-            Assert.Equal(100, carRental.CalculateAmount(rentDC));
+            Assert.Equal(100, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "h";
             rentDC.Duration = 3;
-            Assert.Equal(300, carRental.CalculateAmount(rentDC));
+            Assert.Equal(300, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
         [Fact]
@@ -41,7 +41,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "d";
             rentDC.Duration = 1;
-            Assert.Equal(2000, carRental.CalculateAmount(rentDC));
+            Assert.Equal(2000, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
         [Fact]
@@ -49,7 +49,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "d";
             rentDC.Duration = 2;
-            Assert.Equal(4000, carRental.CalculateAmount(rentDC));
+            Assert.Equal(4000, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "k";
             rentDC.Duration = 0;
-            Assert.Equal(100, carRental.CalculateAmount(rentDC));
+            Assert.Equal(100, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
         [Fact]
@@ -65,7 +65,7 @@ namespace katas.car_rental
         {
             rentDC.Type = "k";
             rentDC.Duration = 1;
-            Assert.Equal(110, carRental.CalculateAmount(rentDC));
+            Assert.Equal(110, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
     }
 }
