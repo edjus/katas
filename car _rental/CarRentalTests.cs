@@ -21,6 +21,12 @@ namespace katas.Carrental
         {
             Assert.Equal("Importe: 100", car_rental.GetImport("h", 1));
         }
+
+        [Fact]
+        public void HourlyRent_ImportIs300whenDurationIs3()
+        {
+            Assert.Equal("Importe: 300", car_rental.GetImport("h", 3));
+        }
         
     }
 }
