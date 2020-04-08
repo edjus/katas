@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace katas.Carrental
+namespace katas.car_rental
 {
     public class CarRentalTests
     {

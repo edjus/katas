@@ -1,4 +1,4 @@
-using katas.Carrental;
+using katas.car_rental;
 using TechTalk.SpecFlow;
 using Xunit;
 
