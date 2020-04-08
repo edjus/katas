@@ -2,9 +2,12 @@ namespace katas.car_rental
 {
     public class RentFactory
     {
-        public static RentPerHour CreateRent(RentDataContract rentDC)
+        public static Rent CreateRent(RentDataContract rentDC)
         {
-            return new RentPerHour(rentDC.Duration);
+            if (rentDC.Type == "h")
+                return new RentPerHour(rentDC.Duration);
+
+            return new RentPerDay(rentDC.Duration);
         }
     }
 }

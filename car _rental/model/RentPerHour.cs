@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace katas.car_rental
 {
-    public class RentPerHour
+    public class RentPerHour : Rent
     {
         private int hours;
         private const int PRICE_PER_HOUR = 100;

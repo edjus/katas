@@ -12,5 +12,14 @@ namespace katas.car_rental
             var rent = RentFactory.CreateRent(rentDC);
             Assert.IsType<RentPerHour>(rent);
         }
+
+        [Fact]
+        public void RentFactoryReturnsRentPerDayWhenTypeIsD()
+        {
+            var rentDC = new RentDataContract() { Type = "d" };
+
+            var rent = RentFactory.CreateRent(rentDC);
+            Assert.IsType<RentPerDay>(rent);
+        }
     }
 }
