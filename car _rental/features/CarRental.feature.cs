@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace katas.CarRental.Features
+namespace katas.Car_Rental.Features
 {
     using TechTalk.SpecFlow;
     using System;
