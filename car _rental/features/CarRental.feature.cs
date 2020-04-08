@@ -83,17 +83,11 @@ namespace katas.Car_Rental.Features
         [Xunit.SkippableFactAttribute(DisplayName="Hourly rent")]
         [Xunit.TraitAttribute("FeatureTitle", "Car rental")]
         [Xunit.TraitAttribute("Description", "Hourly rent")]
-        [Xunit.TraitAttribute("Category", "wip")]
-        [Xunit.TraitAttribute("Category", "ignore")]
         public virtual void HourlyRent()
         {
-            string[] tagsOfScenario = new string[] {
-                    "wip",
-                    "ignore"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hourly rent", null, new string[] {
-                        "wip",
-                        "ignore"});
-#line 4
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hourly rent", null, ((string[])(null)));
+#line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -113,25 +107,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 4
     testRunner.Given("the rent date \'2019-01-19\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 6
+#line 5
     testRunner.And("the return date \'2019-01-19\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 7
-    testRunner.And("cuit number 20112223336", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 6
+    testRunner.And("cuit number \"20112223336\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 7
     testRunner.And("the kind rent is \'hour\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 8
     testRunner.And("the duration rent is 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 9
     testRunner.When("I pay for the rent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
+#line 10
     testRunner.Then("the result is \"Amount: 300\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
