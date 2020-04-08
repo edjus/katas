@@ -18,7 +18,6 @@ Scenario: Rent per day
     When I pay for the rent
     Then the result is "Amount: 2000"
 
-@wip @ignore
 Scenario: Rent per kilometres
     Given the rent date '2019-01-19'
     And the return date '2019-01-19'
