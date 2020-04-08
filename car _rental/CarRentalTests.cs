@@ -11,22 +11,27 @@ namespace katas.Carrental
         }
 
         [Fact]
-        public void HourlyRent_ImportIs0whenDurationIs0()
+        public void HourlyRent_AmountIs0whenDurationIs0()
         {
             Assert.Equal("Amount: 0", car_rental.CalculateAmount("h", 0));
         }
 
         [Fact]
-        public void HourlyRent_ImportIs100whenDurationIs1()
+        public void HourlyRent_AmountIs100whenDurationIs1()
         {
             Assert.Equal("Amount: 100", car_rental.CalculateAmount("h", 1));
         }
 
         [Fact]
-        public void HourlyRent_ImportIs300whenDurationIs3()
+        public void HourlyRent_AmountIs300whenDurationIs3()
         {
             Assert.Equal("Amount: 300", car_rental.CalculateAmount("h", 3));
         }
-        
+
+        [Fact]
+        public void RentPerDay_AmountIs2000whenDurationIs1()
+        {
+            Assert.Equal("Amount: 2000", car_rental.CalculateAmount("d", 1));
+        }
     }
 }

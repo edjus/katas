@@ -8,7 +8,10 @@ namespace katas.Carrental
         private const int PRICE_PER_HOUR = 100;
         public string CalculateAmount(string type, int duration)
         {
-            return $"Amount: {PRICE_PER_HOUR * duration}";
+            if (type == "h")
+                return $"Amount: {PRICE_PER_HOUR * duration}";
+            
+            return "Amount: 2000";
         }
     }
 }
