@@ -39,5 +39,11 @@ namespace katas.Carrental
         {
             Assert.Equal("Amount: 4000", car_rental.CalculateAmount("d", 2));
         }
+
+        [Fact]
+        public void RentPerKm_AmountIs100whenDurationIs0()
+        {
+            Assert.Equal("Amount: 100", car_rental.CalculateAmount("k", 0));
+        }
     }
 }
