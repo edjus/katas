@@ -5,18 +5,18 @@ namespace katas.car_rental
 {
     public class CarRental
     {
-        private const int PRICE_PER_HOUR = 100;
-        private const int PRICE_PER_DAY = 2000;
-        private const int BASE_PRICE_PER_KM = 100;
-        private const int PRICE_PER_KM = 10;
-
         public string CalculateAmount(string type, int duration)
         {
-            if (type == "k") return $"Amount: {BASE_PRICE_PER_KM + PRICE_PER_KM * duration}";
+            int amount = 0;
 
-            var base_price = (type == "h") ? PRICE_PER_HOUR : PRICE_PER_DAY;
+            if (type == "h")
+                amount = (new RentPerHour(duration)).Amount();
+            if (type == "d")
+                amount = (new RentPerDay(duration)).Amount();
+            if (type == "k")
+                amount = (new RentPerKilometre(duration)).Amount();
 
-            return $"Amount: {base_price * duration}";
+            return $"Amount: {amount}";
         }
     }
 }
