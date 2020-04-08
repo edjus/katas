@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace katas.car_rental
 {
-    internal class RentPerKilometre
+    internal class RentPerKilometre : Rent
     {
         private int kilometres;
         private const int BASE_PRICE_PER_KM = 100;
