@@ -17,3 +17,13 @@ Scenario: Rent per day
     And the duration rent is 1
     When I pay for the rent
     Then the result is "Amount: 2000"
+
+@wip @ignore
+Scenario: Rent per kilometres
+    Given the rent date '2019-01-19'
+    And the return date '2019-01-19'
+    And cuit number "20112223336"
+    And the kind rent is 'k'
+    And the duration rent is 1
+    When I pay for the rent
+    Then the result is "Amount: 110"
