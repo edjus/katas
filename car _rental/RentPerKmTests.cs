@@ -11,5 +11,13 @@ namespace katas.car_rental
 
             Assert.Equal(100, rent.Amount());
         }
+
+        [Fact]
+        public void AmountPerFourKmIsOneHundredFourty()
+        {
+            var rent = new RentPerKilometre(4);
+
+            Assert.Equal(140, rent.Amount());
+        }
     }
 }
