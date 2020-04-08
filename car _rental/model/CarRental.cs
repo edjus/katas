@@ -5,16 +5,16 @@ namespace katas.car_rental
 {
     public class CarRental
     {
-        public int CalculateAmount(string type, int duration)
+        public int CalculateAmount(RentDataContract rentDC)
         {
             int amount = 0;
 
-            if (type == "h")
-                amount = (new RentPerHour(duration)).Amount();
-            if (type == "d")
-                amount = (new RentPerDay(duration)).Amount();
-            if (type == "k")
-                amount = (new RentPerKilometre(duration)).Amount();
+            if (rentDC.Type == "h")
+                amount = (new RentPerHour(rentDC.Duration)).Amount();
+            if (rentDC.Type == "d")
+                amount = (new RentPerDay(rentDC.Duration)).Amount();
+            if (rentDC.Type == "k")
+                amount = (new RentPerKilometre(rentDC.Duration)).Amount();
 
             return amount;
         }
