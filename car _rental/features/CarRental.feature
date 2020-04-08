@@ -9,7 +9,6 @@ Scenario: Hourly rent
     When I pay for the rent
     Then the result is "Amount: 300"
 
-@wip @ignore
 Scenario: Rent per day
     Given the rent date '2019-01-19'
     And the return date '2019-01-19'
