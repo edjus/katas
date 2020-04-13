@@ -17,6 +17,8 @@ namespace katas.car_rental
         {
             rentDC.Type = "h";
             rentDC.Duration = 0;
+            rentDC.Cuit = "20112223336";
+
             Assert.Equal(0, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
@@ -25,6 +27,8 @@ namespace katas.car_rental
         {
             rentDC.Type = "h";
             rentDC.Duration = 1;
+            rentDC.Cuit = "20112223336";
+
             Assert.Equal(100, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
@@ -33,6 +37,8 @@ namespace katas.car_rental
         {
             rentDC.Type = "h";
             rentDC.Duration = 3;
+            rentDC.Cuit = "20112223336";
+
             Assert.Equal(300, carRental.CalculateAmount(RentFactory.CreateRent(rentDC)));
         }
 
