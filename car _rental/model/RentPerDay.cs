@@ -6,10 +6,12 @@ namespace katas.car_rental
     public class RentPerDay : Rent
     {
         private int days;
+        private string cuit;
         private const int PRICE_PER_DAY = 2000;
-        public RentPerDay(int days)
+        public RentPerDay(string cuit, int days)
         {
             this.days = days;
+            this.cuit = cuit;
         }
 
         public int Amount()
