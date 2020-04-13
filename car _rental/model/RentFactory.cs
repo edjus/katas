@@ -10,7 +10,7 @@ namespace katas.car_rental
             if (rentDC.Type == "d")
                 return new RentPerDay(rentDC.Cuit, rentDC.Duration);
 
-            return new RentPerKilometre(rentDC.Duration); 
+            return new RentPerKilometre(rentDC.Cuit, rentDC.Duration); 
         }
     }
 }

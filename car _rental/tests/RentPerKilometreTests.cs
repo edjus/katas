@@ -4,10 +4,13 @@ namespace katas.car_rental
 {
     public class RentPerKmTests
     {
+        private const string CUIT = "20112223336";
+        private const string CUIT_COMPANY = "26112223336";
+
         [Fact]
         public void AmountPerZeroKmIsOneHundred()
         {
-            var rent = new RentPerKilometre(0);
+            var rent = new RentPerKilometre(CUIT, 0);
 
             Assert.Equal(100, rent.Amount());
         }
@@ -15,7 +18,7 @@ namespace katas.car_rental
         [Fact]
         public void AmountPerFourKmIsOneHundredFourty()
         {
-            var rent = new RentPerKilometre(4);
+            var rent = new RentPerKilometre(CUIT, 4);
 
             Assert.Equal(140, rent.Amount());
         }
