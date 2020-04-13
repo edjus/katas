@@ -5,7 +5,7 @@ namespace katas.car_rental
 {
     public class CarRental
     {
-        public int CalculateAmount(Rent aRent)
+        public double CalculateAmount(Rent aRent)
         {
             return aRent.Amount();
         }

@@ -7,11 +7,11 @@ namespace katas.car_rental
     {
         private int days;
         private string cuit;
-
-        private double discount = 1;
         private const int PRICE_PER_DAY = 2000;
         private const string START_CUIT_COMPANY = "26";
-        private const double FACTOR_DISCOUNT = 0.95;
+        private double factor_discount;
+        private const double DISCOUNT = 0.95;
+        private const double NORMAL = 1;
 
         public RentPerDay(string cuit, int days)
         {
@@ -19,12 +19,11 @@ namespace katas.car_rental
             this.cuit = cuit;
         }
 
-        public int Amount()
+        public double Amount()
         {
-            if (cuit.Substring(0, 2).Equals(START_CUIT_COMPANY))
-                discount = FACTOR_DISCOUNT;
-                
-            return (int)(PRICE_PER_DAY * days * discount);
+            factor_discount = cuit.StartsWith(START_CUIT_COMPANY) ? DISCOUNT : NORMAL;
+            
+            return PRICE_PER_DAY * days * factor_discount;
         }
     }
 }

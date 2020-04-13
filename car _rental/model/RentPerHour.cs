@@ -7,24 +7,24 @@ namespace katas.car_rental
     {
         private int hours;
         private string cuit;
-        private double discount;
         private const int PRICE_PER_HOUR = 100;
         private const string START_CUIT_COMPANY = "26";
-        private const double FACTOR_DISCOUNT = 0.95;  
+        private double factor_discount;
+        private const double DISCOUNT = 0.95;
+        private const double NORMAL = 1;
+
 
         public RentPerHour(string cuit, int hours)
         {
             this.hours = hours;
             this.cuit = cuit;
-            this.discount = 1;
         }
 
-        public int Amount()
+        public double Amount()
         {
-            if (cuit.Substring(0, 2).Equals(START_CUIT_COMPANY))
-                discount = FACTOR_DISCOUNT;
+            factor_discount = cuit.StartsWith(START_CUIT_COMPANY) ? DISCOUNT : NORMAL;
 
-            return (int) (PRICE_PER_HOUR * hours * discount);
+            return PRICE_PER_HOUR * hours * factor_discount;
         }
     }
 }

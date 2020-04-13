@@ -7,12 +7,12 @@ namespace katas.car_rental
     {
         private int kilometres;
         private string cuit;
-        private double discount = 1;
         private const int BASE_PRICE_PER_KM = 100;
         private const int PRICE_PER_KM = 10;
         private const string START_CUIT_COMPANY = "26";
-        private const double FACTOR_DISCOUNT = 0.95;  
-
+        private double factor_discount;
+        private const double DISCOUNT = 0.95;  
+        private const double NORMAL = 1;
 
         public RentPerKilometre(string cuit, int kilometres)
         {
@@ -20,12 +20,11 @@ namespace katas.car_rental
             this.cuit = cuit;
         }
 
-        public int Amount()
+        public double Amount()
         {
-            if (cuit.Substring(0, 2).Equals(START_CUIT_COMPANY))
-                discount = FACTOR_DISCOUNT;
+            factor_discount = cuit.StartsWith(START_CUIT_COMPANY) ? DISCOUNT : NORMAL;
 
-            return (int) ((BASE_PRICE_PER_KM + PRICE_PER_KM * kilometres) * discount);
+            return (BASE_PRICE_PER_KM + PRICE_PER_KM * kilometres) * factor_discount;
         }
     }
 }
