@@ -22,5 +22,13 @@ namespace katas.car_rental
 
             Assert.Equal(140, rent.Amount());
         }
+
+        [Fact]
+        public void AmountPerKmWithoutKmIsNinetyFiveIfIsCompany()
+        {
+            var rent = new RentPerKilometre(CUIT_COMPANY, 0);
+
+            Assert.Equal(95, rent.Amount());
+        }
     }
 }
