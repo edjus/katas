@@ -16,6 +16,8 @@ namespace katas.car_rental
 
         public int Amount()
         {
+            if (cuit.Substring(0,2) == "26")
+                return (int) (PRICE_PER_DAY * days * 0.95);
             return PRICE_PER_DAY * days;
         }
     }
