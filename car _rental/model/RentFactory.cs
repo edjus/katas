@@ -5,7 +5,7 @@ namespace katas.car_rental
         public static Rent CreateRent(RentDataContract rentDC)
         {
             if (rentDC.Type == "h")
-                return new RentPerHour(rentDC.Duration);
+                return new RentPerHour(rentDC.Cuit, rentDC.Duration);
 
             if (rentDC.Type == "d")
                 return new RentPerDay(rentDC.Duration);
