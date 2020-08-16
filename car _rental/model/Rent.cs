@@ -1,7 +1,9 @@
 namespace katas.car_rental
 {
-    public interface Rent
+    public abstract class Rent
     {
-         double Amount();
+        protected string cuit;
+        protected double factorDiscount;
+        abstract public double Amount();
     }
 }

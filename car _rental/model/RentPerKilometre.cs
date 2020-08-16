@@ -6,11 +6,9 @@ namespace katas.car_rental
     public class RentPerKilometre : Rent
     {
         private int kilometres;
-        private string cuit;
         private const int BASE_PRICE_PER_KM = 100;
         private const int PRICE_PER_KM = 10;
         private const string START_CUIT_COMPANY = "26";
-        private double factor_discount;
         private const double DISCOUNT = 0.95;  
         private const double NORMAL = 1;
 
@@ -20,11 +18,11 @@ namespace katas.car_rental
             this.cuit = cuit;
         }
 
-        public double Amount()
+        public  override double Amount()
         {
-            factor_discount = cuit.StartsWith(START_CUIT_COMPANY) ? DISCOUNT : NORMAL;
+            factorDiscount = cuit.StartsWith(START_CUIT_COMPANY) ? DISCOUNT : NORMAL;
 
-            return (BASE_PRICE_PER_KM + PRICE_PER_KM * kilometres) * factor_discount;
+            return (BASE_PRICE_PER_KM + PRICE_PER_KM * kilometres) * factorDiscount;
         }
     }
 }
