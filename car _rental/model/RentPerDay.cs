@@ -7,9 +7,6 @@ namespace katas.car_rental
     {
         private int days;
         private const int PRICE_PER_DAY = 2000;
-        private const string START_CUIT_COMPANY = "26";
-        private const double DISCOUNT = 0.95;
-        private const double NORMAL = 1;
 
         public RentPerDay(string cuit, int days)
         {
@@ -17,11 +14,7 @@ namespace katas.car_rental
             this.cuit = cuit;
         }
 
-        public override double Amount()
-        {
-            factorDiscount = cuit.StartsWith(START_CUIT_COMPANY) ? DISCOUNT : NORMAL;
-            
-            return PRICE_PER_DAY * days * factorDiscount;
-        }
+        public override double getAmount() => PRICE_PER_DAY * days * factorDiscount;
+
     }
 }
